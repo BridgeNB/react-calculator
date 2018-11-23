@@ -134,7 +134,6 @@ body:hover::-webkit-scrollbar-thumb,
   color: #d63c6b;
   color: var(--primary);
   text-align: right;
-  direction: rtl;
   white-space: nowrap;
 }
 .button-type-function {

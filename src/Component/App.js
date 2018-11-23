@@ -32,7 +32,7 @@ class App extends Component {
         })
         break
       case 'equal':
-        // this.evalFormula()
+        this.evalFormula()
         break
       default:
         const newOperations = update(this.state.formula, {
@@ -46,6 +46,7 @@ class App extends Component {
   }
   render() {
     const result = this.state.formula.join('');
+    // console.log(result);
     return (
       <main className="react-calculator">
         <Display data={result} />
