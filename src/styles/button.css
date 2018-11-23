@@ -1,0 +1,32 @@
+button {
+    online: none;
+    border: 0;
+    padding: 1rem;
+    background-color: var(--black);
+
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--number-color);
+
+    transition: all var(--transition) var(--easing);
+
+    &.hover {
+        color: var(--number-color-dk);
+    }
+
+    &.block {
+        with: 100%;
+    }
+
+    &.transparent {
+        background-color: transparent;
+    }
+
+    &.no-padding {
+        padding: 0;
+    }
+
+    &.long-text {
+        font-size: 1rem;
+    }
+}

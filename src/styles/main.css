@@ -1,0 +1,87 @@
+
+@import "root.css";
+@import "general.css";
+@import "button.css"; 
+
+body, .display {
+  &::-webkit-scrollbar { width: .5rem; }
+  &::-webkit-scrollbar:horizontal { height: .5rem; }
+  
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar:horizontal {
+    background-color: var(--pure-black);
+  }
+  
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar:horizontal {
+    background-color: var(--primary);
+  }
+  
+  &:hover {
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar:horizontal {
+      background-color: var(--primary-dk);
+    } 
+  }
+}
+
+.react-calculator {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 400px;
+  
+  box-shadow: 0 19px 38px var(--pure-black-alpha-light),
+    0 15px 12px var(--pure-black-alpha-transparent);
+}
+
+.display {
+  height: 20%;
+  z-index: 10;
+
+  outline: none;
+  box-shadow: 0 4px 2px -2px var(--pure-black-alpha);
+  padding: .5rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  
+  background-color: var(--pure-black-alpha);
+
+  font-size: 2rem;
+  line-height: 2;
+  color: var(--primary);
+  text-align: right;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+
+.button-type-function {
+  color: var(--primary);
+}
+
+.button-type-number {
+  background-color: var(--black);
+}
+
+.console {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 80%;
+}
+
+button[class^="button-type"] {
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid var(--primary);
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 20%;
+  min-width: 25%;
+}
+
+button[data-size="2"] {
+  width: 50%;
+}

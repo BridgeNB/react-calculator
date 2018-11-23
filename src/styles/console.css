@@ -1,0 +1,41 @@
+@import "button.css"
+
+.console {
+    &.button-type-function {
+      background-color: var(--black);
+      button {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        
+        vertical-align: top;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        color: var(--primary);
+        
+        &:hover {
+          color: var(--primary-dk);
+        }
+      }
+    }
+  
+    &.button-type-number {
+      background-color: var(--black);
+      button {
+        display: block;
+        position: relative;
+        
+        width: 80px;
+        height: 80px;
+        float: left;
+        
+        background-color: var(--black);
+        
+        transition: box-shadow var(--transition) var(--easing);
+        
+        &:last-child {        
+          width: 100%;
+        }
+      }
+    }
+}
